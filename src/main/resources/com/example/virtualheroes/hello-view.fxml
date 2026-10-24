@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" minHeight="1000.0" prefWidth="900.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.virtualheroes.control.VHController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <HBox prefHeight="100.0" prefWidth="200.0" spacing="10">
+        <TextField fx:id="txtId" promptText="ID" />
+        <TextField fx:id="txtNombre" promptText="Nombre" />
+
+
+        <Button  fx:id="btnCrear"  mnemonicParsing="false" onMouseClicked="#handleCrear" prefHeight="25.0" prefWidth="74.0" text="Carer" />
+        <Button fx:id="btnEliminar" mnemonicParsing="false" onMouseClicked="#handleEliminar" prefHeight="25.0" prefWidth="82.0" text="Eliminar" />
+        <Button fx:id="btnMostrar" mnemonicParsing="false" onMouseClicked="#handleMostrar" prefHeight="25.0" prefWidth="87.0" text="Mostrar" />
+        <Button fx:id="btnActualizar" maxHeight="25.0" maxWidth="333.0" onMouseClicked="#handleActualizarr" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Actualizar" />
+    </HBox>
+
+
+
+    <TableView fx:id="tableHeroes" onMouseClicked="#handleSelection">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" />
+            <TableColumn fx:id="colNombre" text="Nombre" />
+
+        </columns>
+    </TableView>
+</VBox>
