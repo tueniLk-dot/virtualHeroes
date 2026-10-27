@@ -50,9 +50,10 @@ public class VHController {
     private void refrescarTabla() {
         tableHeroes.setItems(FXCollections.observableArrayList(heroesService.obtenerHeroes()));
     }
-    private void limpiarCampos() {
+    private void limpiar() {
         txtId.clear();
         txtNombre.clear();
+        chkLimpiar.setSelected(false);
     }
     private void alerta(String mensaje) {
         new Alert(Alert.AlertType.WARNING, mensaje).show();
@@ -69,7 +70,6 @@ public class VHController {
     }
     @FXML
     public void handleEliminar(MouseEvent mouseEvent) {
-
         try {
             long id = Long.parseLong(txtId.getText().trim());
             heroesService.eliminar(id);
